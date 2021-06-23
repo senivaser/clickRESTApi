@@ -1,0 +1,29 @@
+{
+  "name": "clickrestapi",
+  "version": "1.0.0",
+  "description": "test task for click.uz/ru",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senivaser/clickRESTApi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senivaser/clickRESTApi/issues"
+  },
+  "homepage": "https://github.com/senivaser/clickRESTApi#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "fastify": "^3.18.0",
+    "fastify-auth": "^1.1.0",
+    "fastify-basic-auth": "^2.0.0",
+    "fastify-swagger": "^4.8.0",
+    "generate-password": "^1.6.0",
+    "mongoose": "^5.12.14",
+    "uuid": "^8.3.2"
+  }
+}
