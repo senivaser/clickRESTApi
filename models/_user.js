@@ -15,13 +15,15 @@ const userSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now()
-    },
+    },//создан
     id: {
         type: String,
         required: true
-    }
+    }//id для запроса user/:id
 })
 
+//Пресейвер, который хэширует заведенный пользователем прирегистрации пароль
+//Используется библиотека bcryptjs
 userSchema.pre('save', async function (next) {
     try {
         if(!this.isModified('password')) {
@@ -36,6 +38,8 @@ userSchema.pre('save', async function (next) {
     }
 })
 
+//Поскольку пароль захеширован, проверка его осуществляется через bcrypt.compare
+//Данный метод модели соотносит пароль из аунтефикации с хешем пароля в модели
 userSchema.methods.comparePassword = async function (attempt, next) {
     try {
         return await bcrypt.compare(attempt, this.password)

@@ -3,10 +3,12 @@ const { handlerRegister, handlerUsers, handlerUserId, handlerStats, handlerClean
 
 module.exports = (fastify, opts, done) => {
 
+  //Опция, требующая авторизацию для корректного ответа на запрос
   const authOpts = {
       onRequest: fastify.auth([fastify.basicAuth])
   }
 
+  //Список routes
   fastify.post('/register', handlerRegister)
 
   fastify.get('/users', authOpts, handlerUsers)

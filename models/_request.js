@@ -5,19 +5,19 @@ const requestSchema = new mongoose.Schema({
       type: String,
       required: true,
       unique: true,
-  },
+  },//request Id
   route: {
     type: String,
     required: true
-  },
+  },//route
   responseTime: {
       type: Number,
       required: true
-  },
+  },//время ответа
   executedAt: {
       type: Date,
       default: Date.now()
-  }
+  }//выполнен
   
 })
 

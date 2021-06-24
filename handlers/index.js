@@ -1,3 +1,5 @@
+//Подключение всех модулей для единого доступа через handlers
+
 module.exports = {
   ...require('./handlerRegister'),
   ...require('./handlerUsers'),

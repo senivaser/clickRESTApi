@@ -7,11 +7,12 @@ module.exports.handlerCleanup = async (req, res) => {
   try {
     await db.User.deleteMany()
   } catch (err) {
+    
     //Ошибка очистки в mongodb
 
     //log для разработчика
     console.log(err)
-    
+
     throw errorCreated('Server issues', 500)
   }
 
